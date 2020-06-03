@@ -29,7 +29,7 @@ def k_means(data, k):
     centroids = inicial_centroids(data[:], k)
     print(f"\nCentroides iniciais: {centroids}\n")
   
-    past_centroids = [None]*k   # centroids de uma iteracao anterior
+    past_centroids = [None]*k   # centroids da iteracao anterior
     
     relocations = True
     while relocations:
@@ -54,7 +54,7 @@ def k_means(data, k):
         if past_centroids == centroids:   # verificar se houve mudanças nos centroides
             relocations = False
         else:
-            past_centroids = centroids
+            past_centroids = centroids[:]
         
     return groups
 
