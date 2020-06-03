@@ -64,9 +64,19 @@ def main():
     data = [(1.0,1.0), (1.5,2.0), (3.0,4.0), (5.0,7.0),
             (3.5,5.0), (4.5,5.0), (3.5,4.5)]
     k = 2
+
+    groups = []
+
+    f = open("data_ex1.txt", "r")
+    for line in f:
+        line = line.strip("()\n")   # remover os parenteses e quebras de linha da leitura
+        
+        aux = line.split(",")
+        groups.append((float(aux[0]), float(aux[1])))   # transformar as coordenas de str para float
+        
     groups = k_means(data, k)
 
     for i in range(k):
         print(f"Cluster {i+1}:",groups[i])
-
+    
 main()
