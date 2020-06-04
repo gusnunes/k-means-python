@@ -3,4 +3,5 @@ K-Means é um algoritmo de aprendizado não supervisionado, onde os dados são a
 
 ### Instrucao
 O input suporta coordenadas cartesianas de vários pontos no formato de tupla
+Os arquivos "data_ex1" e "data_ex2" são exemplos de como os pontos devem estar escritos
 
