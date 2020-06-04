@@ -53,7 +53,7 @@ def k_means(data, k):
             index = 0
 
             cont = 1
-            while cont < k:   # calcular a distancia entre cada dado e o centroide de cada grup
+            while cont < k:   # calcular a distancia entre cada dado e o centroide de cada grupo
                 distancia = calc_distancia(coord, centroids[cont])
                 if distancia < menor:
                     menor = distancia
